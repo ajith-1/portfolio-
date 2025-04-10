@@ -1,0 +1,31 @@
+{
+  "name": "react",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.3.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.2",
+    "@mui/material-pigment-css": "^7.0.2",
+    "@pigment-css/react": "^0.0.30",
+    "@types/react": "^19.1.0",
+    "framer": "^2.4.1",
+    "framer-motion": "^12.6.3",
+    "material": "^0.9.23",
+    "motion": "^12.6.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scroll": "^1.9.3",
+    "ui": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
