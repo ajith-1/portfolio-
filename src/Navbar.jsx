@@ -1,26 +1,11 @@
-// Navbar.jsx
 import React, { useState } from 'react';
-import {
-  Box,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
+import { Box, Drawer, IconButton, List, ListItem, ListItemText } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
 const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
-
 const bars = {
-  base: {
-    width: 30,
-    height: 4,
-    backgroundColor: 'black',
-    borderRadius: 10,
-    margin: 4,
-  },
+  base: { width: 30, height: 4, backgroundColor: 'black', borderRadius: 10, margin: 4 },
   top: { rotate: 45, y: 8 },
   middle: { opacity: 0 },
   bottom: { rotate: -45, y: -8 },
@@ -28,24 +13,11 @@ const bars = {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
   const toggleDrawer = () => setOpen(!open);
 
   return (
-    <Box
-      display="flex"
-      justifyContent="space-between"
-      alignItems="center"
-      px={3}
-      py={2}
-      bgcolor="white"
-      position="sticky"
-      top={0}
-      zIndex={1000}
-    >
-      <Box component="h1" fontSize="1.5rem" fontWeight="bold">
-        Ajith Kumar
-      </Box>
+    <Box display="flex" justifyContent="space-between" alignItems="center" px={3} py={2} bgcolor="white" position="sticky" top={0} zIndex={1000}>
+      <Box component="h1" fontSize="1.5rem" fontWeight="bold">Portfolio</Box>
 
       <Box sx={{ display: { xs: 'block', md: 'none' } }}>
         <IconButton onClick={toggleDrawer}>
@@ -59,14 +31,7 @@ const Navbar = () => {
 
       <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
         {navItems.map((item) => (
-          <Link
-            key={item}
-            to={item.toLowerCase()}
-            spy={true}
-            smooth={true}
-            duration={500}
-            style={{ cursor: 'pointer', color: 'black', fontWeight: 500 }}
-          >
+          <Link key={item} to={item.toLowerCase()} spy={true} smooth={true} duration={500} style={{ cursor: 'pointer', color: 'black', fontWeight: 500 }}>
             {item}
           </Link>
         ))}
@@ -76,17 +41,7 @@ const Navbar = () => {
         <List sx={{ width: 250 }}>
           {navItems.map((item) => (
             <ListItem button key={item} onClick={toggleDrawer}>
-              <Link
-                to={item.toLowerCase()}
-                spy={true}
-                smooth={true}
-                duration={500}
-                style={{
-                  textDecoration: 'none',
-                  color: 'black',
-                  width: '100%',
-                }}
-              >
+              <Link to={item.toLowerCase()} spy={true} smooth={true} duration={500} style={{ textDecoration: 'none', color: 'black', width: '100%' }}>
                 <ListItemText primary={item} />
               </Link>
             </ListItem>
